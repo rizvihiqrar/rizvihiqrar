@@ -10,6 +10,7 @@ I build automated tests that catch software bugs before customers do, and I set 
 
 | Project | In plain English | Checks |
 |---|---|---|
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 14 testing tools and test suites in one place, all run automatically on every change and every night. Includes an AI tool that writes tests and then checks its own output for weak tests. | ~400 |
 | [accessibility-test-suite](https://github.com/rizvihiqrar/accessibility-test-suite) | Checks web pages against accessibility rules, so people who use screen readers or only a keyboard can use the site. | 14 |
 | [api-test-suite](https://github.com/rizvihiqrar/api-test-suite) | Tests the back-end services apps depend on: logging in, creating and changing data, and handling errors. | 13 |
 | [playwright-demo-suite](https://github.com/rizvihiqrar/playwright-demo-suite) | Runs a real web app through its main flows: logging in, the shopping cart, and checkout. | 16 |
