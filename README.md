@@ -10,7 +10,7 @@ I build automated tests that catch software bugs before customers do, and I set 
 
 | Project | In plain English | Checks |
 |---|---|---|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 20 testing tools and test suites in one place, all run automatically on every change and every night. Includes an AI tool that writes tests and checks its own output, SQL checks for bad data, and an API contract checker that found and fixed two real bugs on its first run. | ~550 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 24 testing tools and test suites in one place, all run automatically on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/). Includes an AI tool that writes tests and checks its own output, performance tests that found a real slowdown, and an API contract checker that found two real bugs. | ~600 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | A small API with a full delivery pipeline: code checks, unit tests, integration tests, and a deployment step that needs approval. | 56 |
 | [accessibility-test-suite](https://github.com/rizvihiqrar/accessibility-test-suite) | Checks web pages against accessibility rules, so people who use screen readers or only a keyboard can use the site. | 14 |
 | [playwright-demo-suite](https://github.com/rizvihiqrar/playwright-demo-suite) | Runs a real web app through its main flows: logging in, the shopping cart, and checkout. | 16 |
@@ -24,7 +24,9 @@ Each project has its own README with a short summary, how to run it, and the res
 
 - **Automated testing** of web apps and APIs, so releases get checked the same way every time.
 - **CI/CD pipelines** that run tests on every change and block a release when something breaks (GitHub Actions and Azure DevOps).
-- **Accessibility checks** against WCAG rules, so problems are caught during development, not after launch.
+- **Accessibility checks** against WCAG rules, so problems are caught during development, not after launch, including audits against the standard Ontario's AODA requires.
+- **Performance testing** with k6: load and spike tests with pass/fail limits. One found that each login froze every other request for about 70 ms; after the fix, page loads went from 67 ms to 1 ms at the 95th percentile.
+- **Release gates** that read test, contract and performance results and block a deployment with a clear reason when something fails.
 - **Data checks in SQL** that find records that don't add up (wrong totals, duplicate customers, payments that don't match) and list the exact rows.
 - **API contract checks** that compare a live API with its documentation and catch wrong types, missing fields, and leaked data.
 - **Clear bug reports and exploratory testing:** checking that bug reports can be acted on, and running timeboxed exploratory sessions with a team debrief.
@@ -38,12 +40,12 @@ In my current role, I took a week-long manual regression process and turned it i
 
 I'm adding one module a day to the platform, each through its own pull request with tests and green CI. The full plan is in the [roadmap](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/ROADMAP.md).
 
-Recently added: a defect report checker, a webhook test harness, log error grouping, an API contract checker, and an exploratory testing tracker.
+Recently added: k6 performance tests, a release gate, an accessibility audit framed around Ontario's AODA, a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), and shared type-checking.
 
 Up next:
-- **Performance tests:** load, spike and soak tests with pass/fail thresholds.
-- **Release gate:** blocks a deployment when smoke tests fail and posts a summary.
-- **Accessibility report:** WCAG checks on a full app, with a findings report framed around Ontario's AODA.
+- **Moving to TypeScript:** one package a day, with stricter checks as each one moves.
+- **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
+- **Sharding:** splitting the browser tests across machines to cut run time.
 
 ---
 
