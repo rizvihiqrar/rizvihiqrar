@@ -10,7 +10,7 @@ I build automated tests that catch software bugs before customers do, and I set 
 
 | Project | In plain English | Checks |
 |---|---|---|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 14 testing tools and test suites in one place, all run automatically on every change and every night. Includes an AI tool that writes tests and then checks its own output for weak tests. | ~400 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 15 testing tools and test suites in one place, all run automatically on every change and every night. Includes an AI tool that writes tests and then checks its own output for weak tests, and SQL checks that find bad data in a database. | ~440 |
 | [accessibility-test-suite](https://github.com/rizvihiqrar/accessibility-test-suite) | Checks web pages against accessibility rules, so people who use screen readers or only a keyboard can use the site. | 14 |
 | [api-test-suite](https://github.com/rizvihiqrar/api-test-suite) | Tests the back-end services apps depend on: logging in, creating and changing data, and handling errors. | 13 |
 | [playwright-demo-suite](https://github.com/rizvihiqrar/playwright-demo-suite) | Runs a real web app through its main flows: logging in, the shopping cart, and checkout. | 16 |
@@ -25,6 +25,7 @@ Each project has its own README with a short summary, how to run it, and the res
 - **Automated testing** of web apps and APIs, so releases get checked the same way every time.
 - **CI/CD pipelines** that run tests on every change and block a release when something breaks (GitHub Actions and Azure DevOps).
 - **Accessibility checks** against WCAG rules, so problems are caught during development, not after launch.
+- **Data checks in SQL** that find records that don't add up (wrong totals, duplicate customers, payments that don't match) and list the exact rows.
 - **AI-assisted test writing:** using AI tools to draft tests from written requirements, then reviewing and fixing the output.
 
 In my current role, I took a week-long manual regression process and turned it into an automated run of 1 to 3 hours.
