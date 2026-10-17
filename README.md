@@ -10,7 +10,7 @@ I build automated tests that catch software bugs before customers do, and I set 
 
 | Project | In plain English | Checks |
 |---|---|---|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 24 testing tools and test suites in one place, all run automatically on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/). Includes an AI tool that writes tests and checks its own output, performance tests that found a real slowdown, and an API contract checker that found two real bugs. | ~600 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 24 testing tools and test suites in one place, all run automatically on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/). Includes an AI tool that writes tests and checks its own output, performance tests that found a real slowdown, and an API contract checker that found two real bugs. | ~650 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | A small API with a full delivery pipeline: code checks, unit tests, integration tests, and a deployment step that needs approval. | 56 |
 | [accessibility-test-suite](https://github.com/rizvihiqrar/accessibility-test-suite) | Checks web pages against accessibility rules, so people who use screen readers or only a keyboard can use the site. | 14 |
 | [playwright-demo-suite](https://github.com/rizvihiqrar/playwright-demo-suite) | Runs a real web app through its main flows: logging in, the shopping cart, and checkout. | 16 |
@@ -42,10 +42,12 @@ I'm adding one module a day to the platform, each through its own pull request w
 
 Recently finished: moving the platform to TypeScript. Nine packages are now strict TypeScript, and every package with code is type-checked in CI. The stricter checks found real bugs along the way: an API that let two order lines oversell a product, an update route that skipped validation, a test assertion that could never fail, and a Windows-only bug that made a SQL tool reject every check.
 
+Also done: the 43 AI-written browser tests that passed review now run as a regression suite split across 3 machines in CI, with a check that proves no test was lost or run twice (a lost or doubled shard still shows green otherwise). I measured the trade-off too: 3 machines finish about 12 seconds sooner but use twice the machine time, so the smaller suites stay on one.
+
 Up next:
-- **Sharding:** splitting the browser tests across machines to cut run time.
 - **Flaky-test tracking:** feeding nightly results into the flaky-test analyzer and tagging repeat offenders.
 - **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
+- **Published reports:** test reports viewable on a web page, not just as downloads.
 
 ---
 
