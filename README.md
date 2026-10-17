@@ -48,9 +48,9 @@ Also done: flaky-test tracking. After every CI run, a workflow reads the last 14
 
 Also done: pull requests now run only the quick smoke tests (16 of 65 browser tests), and the full suite runs on main and every night. A pull request that changes a suite still runs that suite in full, so a test can't merge without running. Along the way I found that Cucumber passes when a tag matches no tests, so a typo could make a smoke run test nothing; it now fails instead.
 
-Up next:
-- **Published reports:** test reports viewable on a web page, not just as downloads.
-- **A guide for non-technical readers:** an architecture diagram and a plain-English pass over the platform's README.
+Also done: the latest [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) are published after every run, next to the dashboard. Before anything goes public it's scanned for secrets, which caught live access tokens in one report on the first try; they're now removed automatically. The platform's README also has a plain-English introduction and updated architecture diagrams for readers who don't write code.
+
+Up next: wrapping up the 30-day plan with a retrospective and a v1.0 release.
 
 ---
 
