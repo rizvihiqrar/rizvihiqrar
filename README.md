@@ -44,8 +44,9 @@ Recently finished: moving the platform to TypeScript. Nine packages are now stri
 
 Also done: the 43 AI-written browser tests that passed review now run as a regression suite split across 3 machines in CI, with a check that proves no test was lost or run twice (a lost or doubled shard still shows green otherwise). I measured the trade-off too: 3 machines finish about 12 seconds sooner but use twice the machine time, so the smaller suites stay on one.
 
+Also done: flaky-test tracking. After every CI run, a workflow reads the last 14 runs of results and keeps one GitHub issue per flaky test. It opens the issue with links to the runs where the test needed a retry and closes it once the test has passed cleanly at least 5 times. Tests that fail every time are reported as broken, not flaky.
+
 Up next:
-- **Flaky-test tracking:** feeding nightly results into the flaky-test analyzer and tagging repeat offenders.
 - **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
 - **Published reports:** test reports viewable on a web page, not just as downloads.
 
