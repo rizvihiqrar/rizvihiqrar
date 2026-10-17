@@ -49,7 +49,7 @@ I followed a [30-day plan](https://github.com/rizvihiqrar/qa-automation-platform
 
 The plan is complete and released as [v1.0.0](https://github.com/rizvihiqrar/qa-automation-platform/releases/tag/v1.0.0). The [retrospective](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/RETROSPECTIVE.md) covers what worked, what didn't, and what it doesn't prove yet.
 
-**Now: Phase 2 (Days 31–60)**, covering test design, testing AI-written code, a banking API, mobile, and backend infrastructure. First up: [root-cause write-ups](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/rca) for five bugs found so far. Putting each bug back to check its test still fails turned up two more: a webhook sender that could lose an event, and live tokens still sitting in a CI artifact.
+**Now: Phase 2 (Days 31–60)**, covering test design, testing AI-written code, a banking API, mobile, and backend infrastructure. First up: [root-cause write-ups](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/rca) for five bugs found so far. Putting each bug back to check its test still fails turned up two more: a webhook sender that could lose an event, and live tokens still sitting in a CI artifact. Then [statistics for flaky tests](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/flaky-test-analyzer#how-sure-are-we-run-to-run-variance): pass rates with confidence intervals, and how many runs it takes to catch a rare flake. 2,537 repeated runs with no failure show each regression test fails less than 1 run in 20, and no more than that.
 
 ---
 
