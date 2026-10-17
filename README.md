@@ -40,12 +40,12 @@ In my current role, I took a week-long manual regression process and turned it i
 
 I'm adding one module a day to the platform, each through its own pull request with tests and green CI. The full plan is in the [roadmap](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/ROADMAP.md).
 
-Recently added: k6 performance tests, a release gate, an accessibility audit framed around Ontario's AODA, a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), and shared type-checking.
+Recently finished: moving the platform to TypeScript. Nine packages are now strict TypeScript, and every package with code is type-checked in CI. The stricter checks found real bugs along the way: an API that let two order lines oversell a product, an update route that skipped validation, a test assertion that could never fail, and a Windows-only bug that made a SQL tool reject every check.
 
 Up next:
-- **Moving to TypeScript:** one package a day, with stricter checks as each one moves.
-- **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
 - **Sharding:** splitting the browser tests across machines to cut run time.
+- **Flaky-test tracking:** feeding nightly results into the flaky-test analyzer and tagging repeat offenders.
+- **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
 
 ---
 
