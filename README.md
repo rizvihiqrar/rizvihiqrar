@@ -46,9 +46,11 @@ Also done: the 43 AI-written browser tests that passed review now run as a regre
 
 Also done: flaky-test tracking. After every CI run, a workflow reads the last 14 runs of results and keeps one GitHub issue per flaky test. It opens the issue with links to the runs where the test needed a retry and closes it once the test has passed cleanly at least 5 times. Tests that fail every time are reported as broken, not flaky.
 
+Also done: pull requests now run only the quick smoke tests (16 of 65 browser tests), and the full suite runs on main and every night. A pull request that changes a suite still runs that suite in full, so a test can't merge without running. Along the way I found that Cucumber passes when a tag matches no tests, so a typo could make a smoke run test nothing; it now fails instead.
+
 Up next:
-- **Faster pull requests:** quick smoke checks on every pull request, the full regression suite nightly.
 - **Published reports:** test reports viewable on a web page, not just as downloads.
+- **A guide for non-technical readers:** an architecture diagram and a plain-English pass over the platform's README.
 
 ---
 
