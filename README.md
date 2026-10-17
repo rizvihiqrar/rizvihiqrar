@@ -47,7 +47,7 @@ I followed a [30-day plan](https://github.com/rizvihiqrar/qa-automation-platform
 - **Published results:** a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/) and the latest [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/), scanned for secrets before publishing (the first scan caught live access tokens in one report).
 - **Green is not proof:** several checks passed while checking nothing (a test with no assertion, a performance limit set too loose, a test runner that passes when a tag matches no tests). Each one is now caught.
 
-Up next: wrapping up the plan with a retrospective and a v1.0 release.
+The plan is complete and released as [v1.0.0](https://github.com/rizvihiqrar/qa-automation-platform/releases/tag/v1.0.0). The [retrospective](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/RETROSPECTIVE.md) covers what worked, what didn't, and what it doesn't prove yet.
 
 ---
 
