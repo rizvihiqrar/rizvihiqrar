@@ -11,12 +11,14 @@ I build automated tests that catch software bugs before customers do, and I set 
 | Project | In plain English | Checks |
 |---|---|---|
 | [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 24 testing tools and test suites in one place, all run automatically on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/). Includes an AI tool that writes tests and checks its own output, performance tests that found a real slowdown, and an API contract checker that found two real bugs. | ~650 |
-| [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | A small API with a full delivery pipeline: code checks, unit tests, integration tests, and a deployment step that needs approval. | 56 |
-| [accessibility-test-suite](https://github.com/rizvihiqrar/accessibility-test-suite) | Checks web pages against accessibility rules, so people who use screen readers or only a keyboard can use the site. | 14 |
-| [playwright-demo-suite](https://github.com/rizvihiqrar/playwright-demo-suite) | Runs a real web app through its main flows: logging in, the shopping cart, and checkout. | 16 |
-| [api-test-suite](https://github.com/rizvihiqrar/api-test-suite) | Tests the back-end services apps depend on: logging in, creating and changing data, and handling errors. | 13 |
+| [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | A small API with the same delivery pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit tests, integration tests, and a deployment step that needs approval. | 56 |
 
-Each project has its own README with a short summary, how to run it, and the results.
+Each project has its own README with a short summary, how to run it, and the results. Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived; their work continues, in more depth, inside the main project.
+
+### Two results in numbers
+
+- **A performance bug found by load testing:** browsing slowed to 67–84 ms (p95) whenever users logged in, because password hashing blocked the server. After moving the hashing off the main thread, p95 dropped to 1 ms and logins went from 72 to 40 ms. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/k6-performance))
+- **AI-written tests, reviewed before they count:** 10 of 10 generated test specs passed an automated review and 42 of 43 tests passed on their first run. The review caught a test with no assertion that the test runner reported as passing. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/ai-test-generator))
 
 ---
 
@@ -36,21 +38,16 @@ In my current role, I took a week-long manual regression process and turned it i
 
 ---
 
-## What I'm building next
+## How the main project was built
 
-I'm adding one module a day to the platform, each through its own pull request with tests and green CI. The full plan is in the [roadmap](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/ROADMAP.md).
+I followed a [30-day plan](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/ROADMAP.md), one module a day, each through its own pull request with tests and green CI. Along the way:
 
-Recently finished: moving the platform to TypeScript. Nine packages are now strict TypeScript, and every package with code is type-checked in CI. The stricter checks found real bugs along the way: an API that let two order lines oversell a product, an update route that skipped validation, a test assertion that could never fail, and a Windows-only bug that made a SQL tool reject every check.
+- **TypeScript:** nine packages are strict TypeScript and every package with code is type-checked in CI. The stricter checks found real bugs: an API that let two order lines oversell a product, an update route that skipped validation, and a Windows-only bug that made a SQL tool reject every check.
+- **Pipeline depth:** pull requests run quick smoke tests (16 of 65 browser tests) and the full suite runs on main and every night. The regression suite is split across 3 machines, with a check that no test was lost or run twice. A workflow tracks flaky tests as GitHub issues, opening and closing them automatically.
+- **Published results:** a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/) and the latest [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/), scanned for secrets before publishing (the first scan caught live access tokens in one report).
+- **Green is not proof:** several checks passed while checking nothing (a test with no assertion, a performance limit set too loose, a test runner that passes when a tag matches no tests). Each one is now caught.
 
-Also done: the 43 AI-written browser tests that passed review now run as a regression suite split across 3 machines in CI, with a check that proves no test was lost or run twice (a lost or doubled shard still shows green otherwise). I measured the trade-off too: 3 machines finish about 12 seconds sooner but use twice the machine time, so the smaller suites stay on one.
-
-Also done: flaky-test tracking. After every CI run, a workflow reads the last 14 runs of results and keeps one GitHub issue per flaky test. It opens the issue with links to the runs where the test needed a retry and closes it once the test has passed cleanly at least 5 times. Tests that fail every time are reported as broken, not flaky.
-
-Also done: pull requests now run only the quick smoke tests (16 of 65 browser tests), and the full suite runs on main and every night. A pull request that changes a suite still runs that suite in full, so a test can't merge without running. Along the way I found that Cucumber passes when a tag matches no tests, so a typo could make a smoke run test nothing; it now fails instead.
-
-Also done: the latest [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) are published after every run, next to the dashboard. Before anything goes public it's scanned for secrets, which caught live access tokens in one report on the first try; they're now removed automatically. The platform's README also has a plain-English introduction and updated architecture diagrams for readers who don't write code.
-
-Up next: wrapping up the 30-day plan with a retrospective and a v1.0 release.
+Up next: wrapping up the plan with a retrospective and a v1.0 release.
 
 ---
 
