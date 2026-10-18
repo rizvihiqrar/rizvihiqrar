@@ -2,6 +2,11 @@
 
 **QA Automation Engineer / SDET** · Playwright · TypeScript · API testing · CI/CD · Performance and security testing
 
+[![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~1%2C030-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
+
 I build automated tests that catch software bugs before customers do, and the pipelines that run those tests every time code changes. Based in the Greater Toronto Area; open to QA Automation and SDET roles, hybrid or remote across Canada. [Let's talk on LinkedIn](https://www.linkedin.com/in/iqrar-rizvi).
 
 **At a glance**
@@ -9,6 +14,12 @@ I build automated tests that catch software bugs before customers do, and the pi
 - **Week → hours:** in my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Real bugs found, then guarded:** a login slowdown fixed from 67 ms to 1 ms, 9 defects that existing tests had passed, and 4 defects in AI-written code that passed every check it was given. Each fix has a test that was shown to fail with the bug put back.
 - **Proof you can click:** about 1,030 automated checks run on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and a [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/). Each project opens with a plain-English summary for non-technical readers.
+
+### See it running
+
+| [![CI dashboard: pass rate and run time of the last CI runs](images/dashboard.png)](https://rizvihiqrar.github.io/qa-automation-platform/) | [![Traceability matrix: every API requirement with its test cases and latest results](images/traceability.png)](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) |
+|---|---|
+| **CI dashboard**: pass rate, run time and flaky results across recent runs, rebuilt after every run | **Traceability matrix**: each API requirement, the cases that check it, and their latest result |
 
 ---
 
@@ -36,6 +47,14 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 ## How I work
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="images/workflow-dark.svg">
+  <img alt="An AI-driven development lifecycle. Inception: requirements reviewed and gaps fixed before any code. Construction: AI writes the code from the reviewed spec, quick checks run in about 1.5 minutes, and a person reviews it against the spec and merges it; a failed check goes back to be fixed. Operations: the full test run on main and every night, results published to a dashboard and test reports, and a release gate that deploys only on GO." src="images/workflow-light.svg" width="100%">
+</picture>
+
+<sub>An AI-driven development lifecycle (AI-DLC): AI drafts and builds, people decide, and tests prove it.</sub>
+
+- **AI does the drafting; people make the decisions.** Requirements are reviewed before code is written, AI-written code is read against the spec, and designed tests decide whether it merges.
 - **Every change goes through a pull request** with tests, and merges only when CI is green.
 - **Green is not proof.** Several checks here once passed while checking nothing (a test with no assertion, a limit set too loose, a runner that passes when no tests match). Each one is now caught. When I fix a bug, I put it back once to show the new test fails.
 - **Write it down.** Bugs get [root-cause write-ups](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/rca); flaky tests get [statistics](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/flaky-test-analyzer#how-sure-are-we-run-to-run-variance) rather than guesses; each project says what it doesn't cover yet.
@@ -67,7 +86,9 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 ## Tools I use
 
 **Testing:** Playwright, TypeScript, JavaScript, Jest, Cucumber (BDD), k6, Postman, Pact (contract testing), Stryker (mutation testing), axe-core, OWASP ZAP
+
 **Pipelines:** GitHub Actions, Azure DevOps, GitLab CI
+
 **Other:** Node.js, REST APIs, OpenAPI, SQL, Jira, Git
 
 ---
