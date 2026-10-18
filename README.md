@@ -3,7 +3,7 @@
 **QA Automation Engineer / SDET** · Playwright · TypeScript · API testing · CI/CD · Performance and security testing
 
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~1%2C030-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~1%2C060-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
@@ -12,8 +12,8 @@ I build automated tests that catch software bugs before customers do, and the pi
 **At a glance**
 
 - **Week → hours:** in my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
-- **Real bugs found, then guarded:** a login slowdown fixed from 67 ms to 1 ms, 9 defects that existing tests had passed, and 4 defects in AI-written code that passed every check it was given. Each fix has a test that was shown to fail with the bug put back.
-- **Proof you can click:** about 1,030 automated checks run on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and a [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/). Each project opens with a plain-English summary for non-technical readers.
+- **Real bugs found, then guarded:** a login slowdown fixed from 67 ms to 1 ms, 9 defects that existing tests had passed, and 7 problems in AI-written code that passed every check it was given. Each fix has a test that was shown to fail with the bug put back.
+- **Proof you can click:** about 1,060 automated checks run on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and a [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/). Each project opens with a plain-English summary for non-technical readers.
 
 ### See it running
 
@@ -37,7 +37,7 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 ## Selected results
 
 - **A performance bug found by load testing.** Browsing slowed to 67–84 ms (p95) whenever users logged in, because password hashing blocked the server. After the fix, p95 dropped to 1 ms and logins went from 72 to 40 ms. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/k6-performance))
-- **AI-written code, checked like code from an unknown author.** An AI built a discount-code feature from a reviewed spec. It passed every existing check, none of which ran the new code. A code review and 126 designed tests then found four defects: 30 February accepted as an expiry date, a two-decimal check that let `10.000000000001` through, the wrong error shown first, and an order total quietly changed from 1.00 to 0.99. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/ai-written-code))
+- **AI-written code, checked like code from an unknown author.** An AI built a discount-code feature from a reviewed spec. It passed every existing check, none of which ran the new code. A code review and 126 designed tests then found four defects: 30 February accepted as an expiry date, a two-decimal check that let `10.000000000001` through, the wrong error shown first, and an order total quietly changed from 1.00 to 0.99. Property-based tests then found two more at values nobody would pick: orders over 2^53 cents losing cents, and about 9% of valid amounts from 131,072.02 up refused. Mutation testing showed which checks the tests only appeared to make. A [scoreboard](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which technique caught each mistake: none caught them all, and the tests that already existed caught none. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/ai-written-code))
 - **AI-written tests, reviewed before they count.** 42 of 43 generated browser tests passed on their first run, and the review caught one with no assertion that the test runner still reported as passing. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/ai-test-generator))
 - **Security testing of an API.** An access-control matrix tries every protected action as each kind of user. It found that any customer could reprice products and read every account, and that anyone could sign an admin token with a secret written in the code. An OWASP ZAP scan now runs in CI, with every finding triaged. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#security-scan))
 - **Test design that finds what other tests missed.** A risk-based test strategy, with cases built from equivalence classes, boundary values, decision tables and state transitions, found 9 defects that the existing tests had passed, for example delivered orders that could go back to pending. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/test-strategy))
@@ -75,7 +75,7 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 ## Coming soon
 
-- Testing AI output: property-based and mutation testing of the AI-written code, model-graded checks compared with human labels, and a red-team suite (prompt injection, made-up answers)
+- Testing AI output: model-graded checks compared with human labels, and a red-team suite (prompt injection, made-up answers)
 - A banking API: exact decimal money, duplicate and simultaneous transfers, and ledger checks that every transfer balances
 - Mobile testing on an Android emulator in CI
 - Backend testing: real databases in Docker, message queues, injected network failures, and tracing
@@ -85,7 +85,7 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 ## Tools I use
 
-**Testing:** Playwright, TypeScript, JavaScript, Jest, Cucumber (BDD), k6, Postman, Pact (contract testing), Stryker (mutation testing), axe-core, OWASP ZAP
+**Testing:** Playwright, TypeScript, JavaScript, Jest, Cucumber (BDD), k6, Postman, Pact (contract testing), fast-check (property-based testing), Stryker (mutation testing), axe-core, OWASP ZAP
 
 **Pipelines:** GitHub Actions, Azure DevOps, GitLab CI
 
