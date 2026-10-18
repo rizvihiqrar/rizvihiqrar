@@ -1,0 +1,31 @@
+name: Refresh screenshots
+
+# The README shows pictures of the live CI dashboard and traceability matrix.
+# Once a week (and on demand) this retakes them and commits only if they changed.
+on:
+  schedule:
+    - cron: '0 12 * * 1'   # Mondays, 12:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Install Playwright and Chromium
+        run: npm install --no-save playwright@1.64.1 && npx playwright install --with-deps chromium
+      - name: Take the screenshots
+        run: node scripts/screenshots.mjs
+      - name: Commit if changed
+        run: |
+          git add images/dashboard.png images/traceability.png
+          if git diff --cached --quiet; then echo "Screenshots unchanged"; exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m "Refresh screenshots of the live dashboard and traceability matrix"
+          git push

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="382" viewBox="0 0 1000 382" role="img" aria-labelledby="title desc">
+<title id="title">An AI-driven development lifecycle</title>
+<desc id="desc">Inception: requirements are reviewed and gaps fixed before any code. Construction: AI writes the code from the reviewed spec as a pull request, quick checks run in about 1.5 minutes, and a person reads it against the spec and merges it; if a check fails, the change is fixed and pushed again. Operations: the full test run of about 1,030 checks runs on main and every night, results are published to a dashboard and test reports, and when releasing, a release gate deploys only on GO.</desc>
+<defs><marker id="a-muted" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#52514e"/></marker><marker id="a-bad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b3261e"/></marker><marker id="a-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/></marker></defs>
+<rect width="1000" height="382" rx="16" fill="#f9f9f7"/>
+<g font-family="system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="8" y="10" width="160.66666666666666" height="232" rx="14" fill="#ecebe5"/>
+<text x="22" y="36" font-size="13" font-weight="800" letter-spacing="1.3" fill="#2a78d6">INCEPTION</text>
+<text x="22" y="58" font-size="14.5" fill="#52514e">Specs before code</text>
+<rect x="172.66666666666666" y="10" width="490" height="232" rx="14" fill="#ecebe5"/>
+<text x="186.66666666666666" y="36" font-size="13" font-weight="800" letter-spacing="1.3" fill="#2a78d6">CONSTRUCTION</text>
+<text x="186.66666666666666" y="58" font-size="14.5" fill="#52514e">AI builds, tests prove it</text>
+<rect x="666.6666666666666" y="10" width="325.33333333333326" height="232" rx="14" fill="#ecebe5"/>
+<text x="680.6666666666666" y="36" font-size="13" font-weight="800" letter-spacing="1.3" fill="#2a78d6">OPERATIONS</text>
+<text x="680.6666666666666" y="58" font-size="14.5" fill="#52514e">Run, watched, released</text>
+<rect x="14" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="40" cy="105" r="13" fill="#2a78d6"/>
+<text x="40" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">1</text>
+<text x="28" y="146" font-size="17.0" font-weight="700" fill="#0b0b0b">Requirements</text>
+<text x="28" y="170" font-size="14.5" fill="#3d3c39">Gaps fixed</text>
+<text x="28" y="189" font-size="14.5" fill="#3d3c39">before any code</text>
+<rect x="28" y="202" width="118.8" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="87.4" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">reviewed spec</text>
+<line x1="164.66666666666666" y1="157" x2="176.66666666666666" y2="157" stroke="#52514e" stroke-width="2" marker-end="url(#a-muted)"/>
+<rect x="178.66666666666666" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="204.66666666666666" cy="105" r="13" fill="#2a78d6"/>
+<text x="204.66666666666666" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">2</text>
+<text x="192.66666666666666" y="146" font-size="16.8" font-weight="700" fill="#0b0b0b">AI writes code</text>
+<text x="192.66666666666666" y="170" font-size="14.5" fill="#3d3c39">Builds from the</text>
+<text x="192.66666666666666" y="189" font-size="14.5" fill="#3d3c39">reviewed spec</text>
+<rect x="192.66666666666666" y="202" width="103.6" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="244.46666666666664" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">Claude Code</text>
+<line x1="329.3333333333333" y1="157" x2="341.3333333333333" y2="157" stroke="#52514e" stroke-width="2" marker-end="url(#a-muted)"/>
+<rect x="343.3333333333333" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="369.3333333333333" cy="105" r="13" fill="#2a78d6"/>
+<text x="369.3333333333333" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">3</text>
+<text x="357.3333333333333" y="146" font-size="17.0" font-weight="700" fill="#0b0b0b">Quick checks</text>
+<text x="357.3333333333333" y="170" font-size="14.5" fill="#3d3c39">Unit, API, k6,</text>
+<text x="357.3333333333333" y="189" font-size="14.5" fill="#3d3c39">browser smoke</text>
+<rect x="357.3333333333333" y="202" width="80.8" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="397.7333333333333" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">~1.5 min</text>
+<line x1="494" y1="157" x2="506" y2="157" stroke="#52514e" stroke-width="2" marker-end="url(#a-muted)"/>
+<rect x="508" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="534" cy="105" r="13" fill="#2a78d6"/>
+<text x="534" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">4</text>
+<text x="522" y="146" font-size="17.0" font-weight="700" fill="#0b0b0b">Human review</text>
+<text x="522" y="170" font-size="14.5" fill="#3d3c39">Reads it against</text>
+<text x="522" y="189" font-size="14.5" fill="#3d3c39">the spec, merges</text>
+<rect x="522" y="202" width="118.8" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="581.4" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">people decide</text>
+<line x1="658.6666666666666" y1="157" x2="670.6666666666666" y2="157" stroke="#52514e" stroke-width="2" marker-end="url(#a-muted)"/>
+<rect x="672.6666666666666" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="698.6666666666666" cy="105" r="13" fill="#2a78d6"/>
+<text x="698.6666666666666" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">5</text>
+<text x="686.6666666666666" y="146" font-size="17.0" font-weight="700" fill="#0b0b0b">Full test run</text>
+<text x="686.6666666666666" y="170" font-size="14.5" fill="#3d3c39">Every suite, on</text>
+<text x="686.6666666666666" y="189" font-size="14.5" fill="#3d3c39">main and nightly</text>
+<rect x="686.6666666666666" y="202" width="118.8" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="746.0666666666666" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">~1,030 checks</text>
+<line x1="823.3333333333333" y1="157" x2="835.3333333333333" y2="157" stroke="#52514e" stroke-width="2" marker-end="url(#a-muted)"/>
+<rect x="837.3333333333333" y="78" width="148.66666666666666" height="158" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<circle cx="863.3333333333333" cy="105" r="13" fill="#2a78d6"/>
+<text x="863.3333333333333" y="110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">6</text>
+<text x="851.3333333333333" y="146" font-size="17.0" font-weight="700" fill="#0b0b0b">Results live</text>
+<text x="851.3333333333333" y="170" font-size="14.5" fill="#3d3c39">Dashboard and</text>
+<text x="851.3333333333333" y="189" font-size="14.5" fill="#3d3c39">test reports</text>
+<rect x="851.3333333333333" y="202" width="88.39999999999999" height="23" rx="11.5" fill="#cde2fb"/>
+<text x="895.5333333333333" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#123d73">published</text>
+<path d="M417.66666666666663,240 V270 Q417.66666666666663,282 405.66666666666663,282 H265 Q253,282 253,270 V246" fill="none" stroke="#b3261e" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#a-bad)"/>
+<text x="335.3333333333333" y="306" text-anchor="middle" font-size="15" font-weight="700" fill="#b3261e">Something failed: fix it and push again</text>
+<line x1="747" y1="240" x2="747" y2="298" stroke="#2a78d6" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#a-blue)"/>
+<text x="759" y="274" font-size="14" fill="#52514e">when releasing</text>
+<rect x="672.6666666666666" y="302" width="313.3333333333333" height="64" rx="12" fill="#ffffff" stroke="rgba(11,11,11,0.12)"/>
+<rect x="672.6666666666666" y="311" width="4" height="46" rx="2" fill="#2a78d6"/>
+<text x="690.6666666666666" y="328" font-size="17" font-weight="700" fill="#0b0b0b">Release gate</text>
+<text x="690.6666666666666" y="351" font-size="14.5" fill="#3d3c39">Reads the results; deploys only on</text>
+<rect x="930.6666666666666" y="336" width="40" height="21" rx="10.5" fill="#0b8a0b"/><text x="950.6666666666666" y="351" text-anchor="middle" font-size="12.5" font-weight="800" fill="#ffffff">GO</text>
+</g></svg>
