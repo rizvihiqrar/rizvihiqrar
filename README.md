@@ -13,10 +13,11 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 
 I build automated tests that catch software bugs before customers do, and the pipelines that run those tests every time code changes. Based in the Greater Toronto Area; open to QA Automation and SDET roles, hybrid or remote across Canada. [Let's talk on LinkedIn](https://www.linkedin.com/in/iqrar-rizvi).
 
-> ### Start here: 2 minutes
-> 1. [**The CI dashboard**](https://rizvihiqrar.github.io/qa-automation-platform/) shows the live pass rate and run time of every test run.
-> 2. [**The AI-written-code scoreboard**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which kind of test caught each mistake in AI-written code.
-> 3. [**A root-cause write-up**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/01-login-hashing-blocked-the-api.md) shows how I found why one login slowed down every other request.
+## Start here
+
+- [**The CI dashboard**](https://rizvihiqrar.github.io/qa-automation-platform/) shows the live pass rate and run time of every test run.
+- [**The AI-written-code scoreboard**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which kind of test caught each mistake in AI-written code.
+- [**A root-cause write-up**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/01-login-hashing-blocked-the-api.md) shows how I found why one login slowed down every other request.
 
 **At a glance**
 
@@ -86,13 +87,15 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 ---
 
-## Coming soon
+## Roadmap
 
-- **Done:** a Python (pytest) suite for the API, next to the Playwright one
-- A short course on testing money in software, with a quiz for each objective and a hands-on practical
-- Visual regression tests
-- Synthetic monitoring: scheduled checks on public sites, with uptime history on the dashboard
-- The banking API's ledger on Postgres in Docker
+| Item | Status | Link |
+|---|---|---|
+| Python (pytest) suite for the API, next to the Playwright one (October 2026) | Done | [packages/api-pytest](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/api-pytest) |
+| Course: Testing money in software, with a quiz for each objective and a hands-on practical | Building | |
+| Visual regression tests | Planned | |
+| Synthetic monitoring: scheduled checks on public sites, with uptime history on the dashboard | Planned | |
+| The banking API's ledger on Postgres in Docker | Planned | |
 
 ---
 
