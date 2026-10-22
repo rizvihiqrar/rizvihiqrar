@@ -2,18 +2,27 @@
 
 **QA Automation Engineer / SDET** · Playwright · TypeScript · API testing · CI/CD · Performance and security testing
 
+QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps, GitHub Actions, AI-assisted test generation), and 7+ years across support, training and QA, including bug replication and troubleshooting. I owned a 152-test Playwright regression suite running in Azure DevOps pipelines, with multi-environment validation, production deployments and the full defect lifecycle.
+
+**Skills:** Test automation · Regression testing · Test cases · Defect tracking · API testing · Agile/Scrum · Playwright · Cypress · TypeScript · Python · k6 · Postman · SQL · GitHub Actions · Azure DevOps · Jira
+
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~1%2C450-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~1%2C490-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
 I build automated tests that catch software bugs before customers do, and the pipelines that run those tests every time code changes. Based in the Greater Toronto Area; open to QA Automation and SDET roles, hybrid or remote across Canada. [Let's talk on LinkedIn](https://www.linkedin.com/in/iqrar-rizvi).
 
+> ### Start here: 2 minutes
+> 1. [**The CI dashboard**](https://rizvihiqrar.github.io/qa-automation-platform/) shows the live pass rate and run time of every test run.
+> 2. [**The AI-written-code scoreboard**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which kind of test caught each mistake in AI-written code.
+> 3. [**A root-cause write-up**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/01-login-hashing-blocked-the-api.md) shows how I found why one login slowed down every other request.
+
 **At a glance**
 
-- **Week → hours:** in my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
-- **Real bugs found, then guarded:** a login slowdown fixed from 67 ms to 1 ms, 9 defects that existing tests had passed, and 7 problems in AI-written code that passed every check it was given. Each fix has a test that was shown to fail with the bug put back.
-- **Proof you can click:** about 1,450 automated checks run on every change and every night, with a [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and a [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/). Each project opens with a plain-English summary for non-technical readers.
+- **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
+- **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
+- **Proof you can click.** About 1,490 automated checks run on every change and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -21,31 +30,31 @@ I build automated tests that catch software bugs before customers do, and the pi
 |---|---|
 | **CI dashboard**: pass rate, run time and flaky results across recent runs, rebuilt after every run | **Traceability matrix**: each API requirement, the cases that check it, and their latest result |
 
+[![Cypress running the test "a double click on Transfer moves the money once, on both accounts" against the banking UI. The test types a transfer of 0.750 KWD and double-clicks Transfer. The command log shows a single POST to /transfers returning 201. The page then shows the confirmation, a balance of 1.250 and one new entry in the statement.](images/double-click-transfer.gif)](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/banking-api/cypress/e2e/idempotency.cy.ts)
+
+*A double click on Transfer in the banking UI. The Cypress log shows one request, and the money moves once. The recording is slowed down about 5 times so each step can be seen.*
+
 ---
 
 ## Key projects
 
 | Project | What it is | Checks |
 |---|---|---:|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 26 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, and AI-assisted testing, each with its own README and results. | ~1,270 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 27 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, and AI-assisted testing, each with its own README and results. | ~1,490 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | One small API delivered by the same pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit and integration tests, and a deployment step that needs approval. | 56 |
 
-Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived; their work continues, in more depth, inside the main project.
+Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
 
 ---
 
 ## Selected results
 
-- **A performance bug found by load testing.** Browsing slowed to 67–84 ms (p95) whenever users logged in, because password hashing blocked the server. After the fix, p95 dropped to 1 ms and logins went from 72 to 40 ms. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/k6-performance))
-- **AI-written code, checked like code from an unknown author.** An AI built a discount-code feature from a reviewed spec. It passed every existing check, none of which ran the new code. A code review and 126 designed tests then found four defects: 30 February accepted as an expiry date, a two-decimal check that let `10.000000000001` through, the wrong error shown first, and an order total quietly changed from 1.00 to 0.99. Property-based tests then found two more at values nobody would pick: orders over 2^53 cents losing cents, and about 9% of valid amounts from 131,072.02 up refused. Mutation testing showed which checks the tests only appeared to make. A [scoreboard](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which technique caught each mistake: none caught them all, and the tests that already existed caught none. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/ai-written-code))
-- **A banking API where every cent is exact.** Accounts in four currencies (0, 2 and 3 decimals) and transfers on a double-entry ledger in SQLite. Money travels as text and is counted in whole cents, never as a floating-point number, so three deposits of 0.10 make exactly 0.30, and amounts too large for a JavaScript number keep their last cent. A request sent twice with the same idempotency key moves the money once, and requests sent at the same time, even through two servers sharing one database, can't overdraw an account. The first real race test found a bug before any overdraft: up to 4 in 60 requests failed with "database is locked", because SQLite gives up at once by default. Then 14 SQL checks read the database directly, the way an auditor would, and prove every transfer still balances, whatever wrote to it. Each check is proven by a defect slipped into the database behind the API, and CI runs them on a database two servers have just raced. They found that a transfer recorded in the wrong currency got past every hand-written test, because the API never reads that column. On top sits a small banking web page, tested with Cypress in Chrome and Firefox: click Pay twice, or lose the connection just after paying, and the money still moves once, because the page sends one idempotency key per form and retries with it. A second tab spending the same money can't leave the page showing a stale balance, and an automated accessibility check finds nothing in light or dark mode or at phone width; it did catch one real problem first, a table that scrolled sideways but couldn't be reached by keyboard. 37 written rules, 244 tests plus 69 browser tests, and 78 mistakes put back on purpose, each one caught. Putting them back also showed where the random tests were weak: they missed an off-by-one in the overdraft check until they were taught to try the exact balance. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/banking-api))
-- **AI-written tests, reviewed before they count.** 42 of 43 generated browser tests passed on their first run, and the review caught one with no assertion that the test runner still reported as passing. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/ai-test-generator))
-- **An AI grader, checked before it's trusted.** Two Claude models judged whether 67 AI-written tests really check their acceptance criteria, and their answers were compared with labels I reviewed case by case. With the first grading instructions, they agreed more with whoever wrote the instructions than with the reviewer, and caught 1 of 6 weak real tests. Instructions rewritten from the reviewer's rules raised agreement from 84% to 91%, but made answers vary more between runs. One disagreement turned out to be a mistake in the human labels, and checking one case at runtime found a real race in the regression suite. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/llm-judge-check))
-- **Red-teaming that AI grader.** 40 tries at prompt injection (fake system updates, a breakout from the code block, a planted verdict) and deceptive code (a claimed test hook, an assertion commented out) moved 0 of 40 verdicts. The one verdict that did change wasn't an attack: the same prompt was judged differently once the session no longer had a neighbouring case to compare it against. The red team also caught two bookkeeping bugs from the earlier grading run: 8 answers filed under the wrong case, and a replay check that had been quietly switched off. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/llm-judge-check))
-- **Every AI test traced, and the traces checked.** All 900 AI test results are sent to a self-hosted Langfuse, and CI fails unless each one has exactly one trace holding its prompt, its reply and its result. A tracing failure leaves every other check green, so only reading the traces back catches it. Pinning the Langfuse version also showed that the release first chosen had never published its web image. ([see every trace](https://rizvihiqrar.github.io/qa-automation-platform/reports/langfuse-traces/))
-- **Security testing of an API.** An access-control matrix tries every protected action as each kind of user. It found that any customer could reprice products and read every account, and that anyone could sign an admin token with a secret written in the code. An OWASP ZAP scan now runs in CI, with every finding triaged. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#security-scan))
-- **Test design that finds what other tests missed.** A risk-based test strategy, with cases built from equivalence classes, boundary values, decision tables and state transitions, found 9 defects that the existing tests had passed, for example delivered orders that could go back to pending. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/test-strategy))
-- **Requirements reviewed before testing.** Reading 43 acceptance criteria against the live app found 29 gaps, including a cart total shown as `$119.94999999999999`. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/requirement-review))
+- **A performance bug found by load testing.** Load testing showed every login froze the API for about 70 ms. I moved password hashing off the main thread, and browsing p95 dropped from 67 ms to 1 ms. ([details](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/01-login-hashing-blocked-the-api.md))
+- **AI-written code, tested like code from an unknown author.** An AI wrote a discount-code feature, and the 165 tests that already existed missed all 7 of its mistakes. A code review, designed tests and property-based tests found every one. ([details](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md))
+- **A banking API where every cent is exact.** I count money in whole cents, so three deposits of 0.10 make exactly 0.30. A transfer sent twice with the same key moves the money once, even after a double click in the browser. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/banking-api))
+- **AI-written tests, reviewed before they count.** 42 of 43 generated browser tests passed on their first run. My review step caught one test with no assertion that the test runner still reported as passing. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/ai-test-generator))
+- **Test design that found what other tests missed.** Cases built with named test design techniques found 9 defects that the 38 existing tests had passed. One of them let a delivered order go back to pending. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/test-strategy))
+- **Security testing of an API.** An access-control matrix showed that any customer could change product prices and read every account. I fixed both, and an OWASP ZAP scan now runs in CI. ([details](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#security-scan))
 
 ---
 
@@ -58,16 +67,16 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 <sub>An AI-driven development lifecycle (AI-DLC): AI drafts and builds, people decide, and tests prove it.</sub>
 
-- **AI does the drafting; people make the decisions.** Requirements are reviewed before code is written, AI-written code is read against the spec, and designed tests decide whether it merges.
-- **Every change goes through a pull request** with tests, and merges only when CI is green.
-- **Green is not proof.** Several checks here once passed while checking nothing (a test with no assertion, a limit set too loose, a runner that passes when no tests match). Each one is now caught. When I fix a bug, I put it back once to show the new test fails.
-- **Write it down.** Bugs get [root-cause write-ups](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/rca); flaky tests get [statistics](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/flaky-test-analyzer#how-sure-are-we-run-to-run-variance) rather than guesses; each project says what it doesn't cover yet.
+- **AI drafts and people decide.** Requirements are reviewed before code is written. AI-written code is read against the spec, and designed tests decide whether it merges.
+- **Every change goes through a pull request.** It merges only when CI is green.
+- **Green is not proof.** Several checks here once passed while checking nothing, such as a test with no assertion that the runner still reported as passing. When I fix a bug, I put it back once to show that the new test fails.
+- **I write it down.** Bugs get [root-cause write-ups](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/rca). Flaky tests get [statistics](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/flaky-test-analyzer#how-sure-are-we-run-to-run-variance) instead of guesses. Each project says what it doesn't cover yet.
 
 ---
 
 ## What I do
 
-- **Automated testing** of web apps and APIs (Playwright, BDD with Cucumber, API contract checks against OpenAPI)
+- **Automated testing** of web apps and APIs (Playwright, BDD with Cucumber, API contract checks against OpenAPI, and Python with pytest)
 - **CI/CD pipelines** that run tests on every change and block a release with a clear reason when something fails
 - **Performance testing** with k6, with pass/fail limits set from measurements
 - **Security and accessibility testing**: access-control tests, OWASP ZAP, and WCAG/AODA audits with axe-core
@@ -79,16 +88,17 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 ## Coming soon
 
-- More on the banking API: the same ledger on Postgres
-- Mobile testing on an Android emulator in CI
-- Backend testing: real databases in Docker, message queues, injected network failures, and tracing
-- Python (pytest) and Selenium suites alongside the Playwright ones
+- **Done:** a Python (pytest) suite for the API, next to the Playwright one
+- A short course on testing money in software, with a quiz for each objective and a hands-on practical
+- Visual regression tests
+- Synthetic monitoring: scheduled checks on public sites, with uptime history on the dashboard
+- The banking API's ledger on Postgres in Docker
 
 ---
 
 ## Tools I use
 
-**Testing:** Playwright, Cypress, TypeScript, JavaScript, Jest, Cucumber (BDD), k6, Postman, Pact (contract testing), fast-check (property-based testing), Stryker (mutation testing), axe-core, OWASP ZAP
+**Testing:** Playwright, Cypress, pytest, TypeScript, JavaScript, Python, Jest, Cucumber (BDD), k6, Postman, Pact (contract testing), fast-check (property-based testing), Stryker (mutation testing), axe-core, OWASP ZAP
 
 **Pipelines:** GitHub Actions, Azure DevOps, GitLab CI
 
