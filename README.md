@@ -91,11 +91,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Visual regression: screenshots of the banking UI in light, dark and phone width, with planted visual bugs the comparison must catch (October 2026) | Done | [packages/visual-regression-demo](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/visual-regression-demo) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| Synthetic monitoring: scheduled checks on public sites, with uptime history on the dashboard | Planned | |
+| Synthetic monitoring: a real browser checks four public sites every 30 minutes, with 30 days of uptime and load-time history on the dashboard and a GitHub issue that opens and closes itself (October 2026) | Done | [packages/synthetic-monitor](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/synthetic-monitor) |
 | The banking API's ledger on Postgres in Docker | Planned | |
 | Observability: OpenTelemetry traces from the practice API, with tests that assert on them | Planned | |
+| Resilience: Toxiproxy injects latency, dropped connections and timeouts, and tests prove the retries and timeouts work | Planned | |
 
 ---
 
