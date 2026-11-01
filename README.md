@@ -91,11 +91,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Visual regression: screenshots of the banking UI in light, dark and phone width, with planted visual bugs the comparison must catch (October 2026) | Done | [packages/visual-regression-demo](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/visual-regression-demo) |
+| Test management kit: 52 accounting test cases kept as plain data, with a validator and exporters for TestRail, any other tool and a Markdown report (November 2026) | Done | [packages/test-management-kit](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/test-management-kit) |
 | Synthetic monitoring: a real browser checks four public sites every 30 minutes, with 30 days of uptime and load-time history on the dashboard and a GitHub issue that opens and closes itself (October 2026) | Done | [packages/synthetic-monitor](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/synthetic-monitor) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
+| Test management kit, stage 2: results sent to TestRail and Jira issues for failed cases, tested against mocks | Planned | |
 | The banking API's ledger on Postgres in Docker | Planned | |
-| Observability: OpenTelemetry traces from the practice API, with tests that assert on them | Planned | |
 
 ---
 
