@@ -91,10 +91,10 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
+| Test management kit, live proof: one real issue filed on a free Jira site, accepted first time (November 2026) | Done | [packages/test-management-kit](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/test-management-kit) |
 | Test management kit, stage 2: results sent to TestRail and a Jira issue filed for each failed case, only after the defect-report-linter says the report is good enough, tested against local mocks of both tools (November 2026) | Done | [packages/test-management-kit](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/test-management-kit) |
 | Test management kit: 52 accounting test cases kept as plain data, with a validator and exporters for TestRail, any other tool and a Markdown report (November 2026) | Done | [packages/test-management-kit](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/test-management-kit) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| Test management kit, live proof: one real issue filed on a free Jira site | Planned | |
 | The banking API's ledger on Postgres in Docker | Planned | |
 
 ---
