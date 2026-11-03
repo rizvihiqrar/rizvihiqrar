@@ -91,11 +91,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
+| Resilience: Toxiproxy slows down, cuts and silences the practice shop API's line to its database, and tests prove the timeouts, the one safe retry and the clear "try again" error; the first run found a crash (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#when-the-database-misbehaves) |
 | Observability: the practice shop API reports every request as an OpenTelemetry trace (the order, the database transaction, each row lock, and on Postgres each SQL statement), and the tests check those traces, down to how long an order waited for a locked row (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#traces-and-metrics) |
-| A practice shop API on a real Postgres database in Docker: the same test suite passes with or without it, and race tests prove two buyers can't both take the last item (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| Resilience: Toxiproxy adds delays, dropped connections and timeouts, and tests prove the retries and timeouts work | Planned | |
 | The banking API's ledger on Postgres in Docker | Planned | |
+| HR and payroll data conversion checks on a Workday-style mock with fake data: counts, totals and mapping rules over three conversion cycles, and a go or no-go report | Planned | |
 
 ---
 
