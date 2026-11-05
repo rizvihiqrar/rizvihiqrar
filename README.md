@@ -1,6 +1,6 @@
 # Iqrar Rizvi
 
-**QA Automation Engineer / SDET** · Playwright · TypeScript · API testing · CI/CD · Performance and security testing
+**QA Analyst, QA Automation / SDET track** · Playwright · TypeScript · API testing · CI/CD · Performance and security testing
 
 QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps, GitHub Actions, AI-assisted test generation), and 7+ years across support, training and QA, including bug replication and troubleshooting. I owned a 152-test Playwright regression suite running in Azure DevOps pipelines, with multi-environment validation, production deployments and the full defect lifecycle.
 
@@ -11,13 +11,14 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
-I build automated tests that catch software bugs before customers do, and the pipelines that run those tests every time code changes. Based in the Greater Toronto Area; open to QA Automation and SDET roles, hybrid or remote across Canada. [Let's talk on LinkedIn](https://www.linkedin.com/in/iqrar-rizvi).
+I build automated tests that catch software bugs before customers do, and the pipelines that run those tests every time code changes. Based in the Greater Toronto Area; open to QA Analyst, QA Automation and SDET roles, hybrid or remote across Canada. [Let's talk on LinkedIn](https://www.linkedin.com/in/iqrar-rizvi).
 
 ## Start here
 
 - [**The CI dashboard**](https://rizvihiqrar.github.io/qa-automation-platform/) shows the live pass rate and run time of every test run.
 - [**The AI-written-code scoreboard**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/ai-written-code/scoreboard.md) shows which kind of test caught each mistake in AI-written code.
 - [**A root-cause write-up**](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/01-login-hashing-blocked-the-api.md) shows how I found why one login slowed down every other request.
+- **For QA analyst roles:** a [test plan](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/test-strategy/test-plan.md) where every case traces to a rule, a [requirement review](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/docs/requirement-review) that read 43 acceptance criteria for what they leave out, a [sample bug report](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/defect-report-linter/examples/good-report.md), and [exploratory testing sessions](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/exploratory-session-tracker/sessions).
 
 **At a glance**
 
