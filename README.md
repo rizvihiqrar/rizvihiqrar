@@ -42,7 +42,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 | Project | What it is | Checks |
 |---|---|---:|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 33 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,300 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 33 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,350 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | One small API delivered by the same pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit and integration tests, and a deployment step that needs approval. | 56 |
 
 Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
@@ -92,10 +92,10 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Food truck API tested from Postman: a chained order flow, CSV and JSON data runs, schema checks and Newman in CI. Test cards cover a decline, a provider timeout and a double charge, and each of 9 planted bugs is put back on every run and must turn its named test red (8 in Postman, 1 in the node tests) (November 2026) | Done | [packages/food-truck-postman](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/food-truck-postman) |
 | Practice shop API: a file-upload form (form-data) tested with 34 cases, and 14 HTTPS certificate tests where an expired, wrong-host, self-signed or untrusted certificate must each be refused for its own reason. The upload tests found a 401 that cut off a client still sending its file (fixed) (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#https-and-certificates) |
+| Practice shop API: an incident game day. I cut the line to the database without warning, a responder worked from the pager and the logs alone, and a written postmortem followed: 147 seconds down, clean 503s, no lost or doubled order, no restart. It found an API log that could not be read as a timeline (now fixed) and showed that 116 of the 147 seconds were spent waiting for permission, so the postmortem has a runbook with a pre-approved first move (November 2026) | Done | [docs/rca/06](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/docs/rca/06-game-day-database-link-cut.md) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| Practice shop API: an incident game day, a database fault on purpose with a written postmortem | Planned | |
+| Practice shop API: an OpenTelemetry Collector in Docker between the API and the trace viewer (the traces themselves are already done), logs joined to traces by trace id, and sampling with its cost | Planned | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api) |
 | HR data conversion, stages 2 and 3, following stage 1 (200 fake workers, 20 planted defects): connection faults during the load, a payroll parallel run, masked personal data, and a go or no-go readiness report | Planned | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
 
 ---
