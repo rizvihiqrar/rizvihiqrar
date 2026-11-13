@@ -47,6 +47,8 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
 
+**Beyond test code:** two more repositories hold training and product work. The [training portfolio](https://github.com/rizvihiqrar/training-portfolio) has courses I designed, with lesson plans, quizzes and scoring guides, and the [product portfolio](https://github.com/rizvihiqrar/product-portfolio) has case studies on deciding what to build, what to test and what to tell customers. The sample data in both is made up.
+
 ---
 
 ## Selected results
