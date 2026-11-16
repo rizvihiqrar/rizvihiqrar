@@ -7,7 +7,7 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 **Skills:** Test automation · Regression testing · Test cases · Defect tracking · API testing · Agile/Scrum · Playwright · Cypress · TypeScript · Python · k6 · Postman · SQL · GitHub Actions · Azure DevOps · Jira
 
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C460-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C580-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
@@ -24,7 +24,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 - **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
-- **Proof you can click.** About 2,460 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
+- **Proof you can click.** About 2,580 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -42,7 +42,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 | Project | What it is | Checks |
 |---|---|---:|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 35 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,460 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 36 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,580 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | One small API delivered by the same pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit and integration tests, and a deployment step that needs approval. | 56 |
 
 Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
@@ -94,10 +94,10 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Two dashboard fixes: the headline now says how many CI jobs and how many packages (48 jobs from 35 packages, not 48 packages), and a weekly workflow retakes the README dashboard pictures from the live page onto its own branch, so they never go stale (November 2026) | Done | [packages/ci-dashboard](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/ci-dashboard) |
-| Four small practice items: filter counts that add up on the practice API, a selector drill (30 elements found three ways, then four layout changes: recorded paths keep 0% after a redesign, hand-written ones 90% and 93%), a lint rule against a state read kept in a variable that goes stale, and a bad-merge walkthrough showing why a revert beats a force-push (November 2026) | Done | [packages/selector-drill](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/selector-drill) |
+| Cross-browser matrix: the same 39 tests run in Chromium, Firefox and WebKit. On Linux, 3 of 11 questions get different answers across the browsers, and on Windows 5 do. WebKit's differences depend on the operating system, which I didn't expect (November 2026) | Done | [packages/browser-matrix](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/browser-matrix) |
+| Accessibility audit of a file upload page, keyboard path: 30 tests now, up from 16 (November 2026) | Done | [packages/a11y-aoda-audit](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/a11y-aoda-audit) |
+| Exploratory test sessions on a practice API, written as charters: three real sessions, five bugs held by failing tests, and the product left unfixed (November 2026) | Done | [packages/exploratory-session-tracker](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/exploratory-session-tracker) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| HR data conversion, stages 2 and 3, following stage 1 (200 fake workers, 20 planted defects): connection faults during the load, a payroll parallel run, masked personal data, and a go or no-go readiness report | Planned | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
 | Release gate, next: a go or no-go memo for each release, a release drift check, and a build promotion that waits for the smoke tests | Planned | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
 
 ---
