@@ -7,7 +7,7 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 **Skills:** Test automation · Regression testing · Test cases · Defect tracking · API testing · Agile/Scrum · Playwright · Cypress · TypeScript · Python · k6 · Postman · SQL · GitHub Actions · Azure DevOps · Jira
 
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C640-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C720-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
@@ -24,7 +24,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 - **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
-- **Proof you can click.** About 2,640 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
+- **Proof you can click.** About 2,720 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -42,7 +42,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 | Project | What it is | Checks |
 |---|---|---:|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 37 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,620 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 37 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,720 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | One small API delivered by the same pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit and integration tests, and a deployment step that needs approval. | 56 |
 
 Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
@@ -94,9 +94,9 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Exploratory test sessions on a practice API, written as charters: three real sessions, five bugs held by failing tests, and the product left unfixed (November 2026) | Done | [packages/exploratory-session-tracker](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/exploratory-session-tracker) |
 | Reproduction scripts in Python: a customer's request log is replayed against a practice API to rebuild the failure. 5 of 6 failures reproduce, 1 honestly doesn't (its cause isn't in a request log), and 2 fixes are verified (November 2026) | Done | [packages/repro-from-logs](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/repro-from-logs) |
 | Head and tail sampling measured on a load run: 1,000 traces, every 10th one failing. Head sampling lost 88 of the 100 failures; tail sampling kept all 100, at about 1.7 times the stored size of head sampling (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#sampling-and-cost) |
+| Payment scheme rules on the banking API (a reference alphabet, a limit on one payment and a limit on what one account sends in a day, tested at every boundary) and network inspection with a proxy: mitmproxy in Docker records the traffic, so tests replay a captured request and change one in flight (November 2026) | Done | [packages/banking-api](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/banking-api/TECHNICAL.md#payment-scheme-rules) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
 | Release gate, next: a go or no-go memo for each release, a release drift check, and a build promotion that waits for the smoke tests | Planned | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
 
