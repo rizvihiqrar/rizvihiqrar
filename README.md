@@ -7,7 +7,7 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 **Skills:** Test automation · Regression testing · Test cases · Defect tracking · API testing · Agile/Scrum · Playwright · Cypress · TypeScript · Python · k6 · Postman · SQL · GitHub Actions · Azure DevOps · Jira
 
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C770-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~2%2C870-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
@@ -24,7 +24,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 - **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
-- **Proof you can click.** About 2,770 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
+- **Proof you can click.** About 2,870 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -94,11 +94,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Head and tail sampling measured on a load run: 1,000 traces, every 10th one failing. Head sampling lost 88 of the 100 failures; tail sampling kept all 100, at about 1.7 times the stored size of head sampling (November 2026) | Done | [packages/qa-practice-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/qa-practice-api#sampling-and-cost) |
 | Payment scheme rules on the banking API (a reference alphabet, a limit on one payment and a limit on what one account sends in a day, tested at every boundary) and network inspection with a proxy: mitmproxy in Docker records the traffic, so tests replay a captured request and change one in flight (November 2026) | Done | [packages/banking-api](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/banking-api/TECHNICAL.md#payment-scheme-rules) |
 | Release gate: a one-page go or no-go memo for each release, a drift check whose limit comes from run-to-run noise (built on 20 real runs), and a build promotion that only points the release tag at an image that passed the smoke tests, proven with a real registry and image in CI (November 2026) | Done | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
+| Release readiness: change types on the release gate (an emergency change skips the wait, never the tests), a readiness page that cannot disagree with the gate, and a plan check that finds the holes in a release plan (23 faults put in one at a time, all found) (November 2026) | Done | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| Release readiness next: a readiness page, change types on the release gate and a dependency map for a demo release | Planned | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
+| Banking API next: regulatory rules, an access-control matrix and release notes for users | Planned | [packages/banking-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/banking-api) |
 
 ---
 
