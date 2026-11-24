@@ -24,7 +24,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 - **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
-- **Proof you can click.** About 3,070 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
+- **Proof you can click.** About 3,120 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -94,11 +94,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Release readiness: change types on the release gate (an emergency change skips the wait, never the tests), a readiness page that cannot disagree with the gate, and a plan check that finds the holes in a release plan (23 faults put in one at a time, all found) (November 2026) | Done | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/release-gate) |
 | Regulatory rules on the banking API (a report for large cash, the 24-hour rule and a sanctions list that holds near matches for review, with an audit record of every decision) and an access-control matrix: a table of roles and actions in one file, checked by a test that sends a real request for every pair and finds a missing or excessive permission (10 wrong tables put in, all found) (November 2026) | Done | [packages/banking-api](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/banking-api/TECHNICAL.md#who-may-do-what) |
 | Release notes for users that cannot promise what was not tested: each note names the rules it relies on, and the release gate blocks a note whose test is failing, skipped or missing, a figure the rules never state, or wording a customer would not read (16 faults put in one at a time, all found) (November 2026) | Done | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/release-gate/README.md#release-notes-for-users) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
-| HR and payroll conversion validation, stage 2: integration faults, a payroll parallel and masked personal data | Planned | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
+| HR and payroll conversion validation, stage 2: a payroll parallel that pays 537 old payslips again and proves every cent of difference by working it out again, a masked copy of the personal data that still breaks the same rules, and the load sent through a bad network line (Toxiproxy: a slow reply, a reset, a silent line, a reply lost after the save) that still ends with nothing lost and nothing loaded twice (November 2026) | Done | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
+| HR and payroll conversion validation, stage 3: a test plan, a traceability matrix, a defect log and a go or no-go readiness report | Planned | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
 
 ---
 
