@@ -7,7 +7,7 @@ QA Analyst with 2+ years in QA automation (Playwright, TypeScript, Azure DevOps,
 **Skills:** Test automation · Regression testing · Test cases · Defect tracking · API testing · Agile/Scrum · Playwright · Cypress · TypeScript · Python · k6 · Postman · SQL · GitHub Actions · Azure DevOps · Jira
 
 [![CI](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/rizvihiqrar/qa-automation-platform/actions/workflows/ci.yml)
-[![Automated checks](https://img.shields.io/badge/automated%20checks-~3%2C180-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
+[![Automated checks](https://img.shields.io/badge/automated%20checks-~3%2C230-2ea44f)](https://github.com/rizvihiqrar/qa-automation-platform)
 [![Live dashboard](https://img.shields.io/badge/live-CI%20dashboard-0969da)](https://rizvihiqrar.github.io/qa-automation-platform/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-iqrar--rizvi-0a66c2)](https://www.linkedin.com/in/iqrar-rizvi)
 
@@ -24,7 +24,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 - **Week to hours.** In my current role, I turned a week-long manual regression process into an automated run of 1 to 3 hours.
 - **Bugs found, then guarded.** Load testing found a login slowdown, and designed tests found 9 defects that the existing tests had passed. Every fix has a test that I watched fail with the bug put back.
-- **Proof you can click.** About 3,180 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
+- **Proof you can click.** About 3,230 automated checks run on every merge and every night. The [live CI dashboard](https://rizvihiqrar.github.io/qa-automation-platform/), the [test reports](https://rizvihiqrar.github.io/qa-automation-platform/reports/) and the [traceability matrix](https://rizvihiqrar.github.io/qa-automation-platform/reports/traceability/) show the results, and each project opens with a plain-English summary.
 
 ### See it running
 
@@ -42,7 +42,7 @@ I build automated tests that catch software bugs before customers do, and the pi
 
 | Project | What it is | Checks |
 |---|---|---:|
-| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 37 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~2,720 |
+| [**qa-automation-platform**](https://github.com/rizvihiqrar/qa-automation-platform) | My main project: 37 testing tools and test suites in one repository, with one CI pipeline. Browser and API tests, performance and security testing, test design, SQL data checks, HR and payroll data conversion checks, and AI-assisted testing, each with its own README and results. | ~3,230 |
 | [cicd-pipeline-demo](https://github.com/rizvihiqrar/cicd-pipeline-demo) | One small API delivered by the same pipeline on GitHub Actions, GitLab CI and Azure DevOps: code checks, unit and integration tests, and a deployment step that needs approval. | 56 |
 
 Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibility-test-suite), [Playwright end-to-end](https://github.com/rizvihiqrar/playwright-demo-suite), [API](https://github.com/rizvihiqrar/api-test-suite)) are archived. Their work continues, in more depth, inside the main project.
@@ -94,11 +94,11 @@ Three earlier suites ([accessibility](https://github.com/rizvihiqrar/accessibili
 
 | Item | Status | Link |
 |---|---|---|
-| Release notes for users that cannot promise what was not tested: each note names the rules it relies on, and the release gate blocks a note whose test is failing, skipped or missing, a figure the rules never state, or wording a customer would not read (16 faults put in one at a time, all found) (November 2026) | Done | [packages/release-gate](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/release-gate/README.md#release-notes-for-users) |
 | Course: Testing money in software, with a quiz for each objective and a hands-on practical (built; the pilot is next) | Building | [packages/money-course](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/money-course) |
 | HR and payroll conversion validation, stage 2: a payroll parallel that pays 537 old payslips again and proves every cent of difference by working it out again, a masked copy of the personal data that still breaks the same rules, and the load sent through a bad network line (Toxiproxy: a slow reply, a reset, a silent line, a reply lost after the save) that still ends with nothing lost and nothing loaded twice (November 2026) | Done | [packages/hcm-conversion-validation](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/hcm-conversion-validation) |
 | HR and payroll conversion validation, stage 3: a test plan with 63 numbered requirements, a traceability matrix built from the test results (a test that names no requirement stops the run), a defect log worked out from the evidence, and a go or no-go report on 7 exit criteria, with a NO-GO example after cycle 2 (November 2026) | Done | [readiness report](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/hcm-conversion-validation/docs/readiness-go.md) |
-| The banking API's ledger on a real Postgres database in CI, with its SQL ledger checks run against it | Planned | [packages/banking-api](https://github.com/rizvihiqrar/qa-automation-platform/tree/main/packages/banking-api) |
+| The banking API's ledger on a real Postgres database: every test runs again there in its own CI job, with the same 14 SQL ledger checks. Row locks taken in a fixed order replace SQLite's whole-database lock, and the first run found a money-laundering rule letting two deposits sent at the same moment through unreported, which SQLite could never show (November 2026) | Done | [the ledger on Postgres](https://github.com/rizvihiqrar/qa-automation-platform/blob/main/packages/banking-api/TECHNICAL.md#the-ledger-on-postgres) |
+| Selenium side by side with Playwright: the same tests written in both, run in CI, with what each one makes easy or hard | Planned | [qa-automation-platform](https://github.com/rizvihiqrar/qa-automation-platform) |
 
 ---
 
